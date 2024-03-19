@@ -121,13 +121,21 @@ const manjeet = [
 
 // ****************OBJECT DECONSTRUCTOR*************
 
-const course ={
+// const course ={
 
- name: "dsa",
- teacher: "babbar",
- price: 799
+//  name: "dsa",
+//  teacher: "babbar",
+//  price: 799
 
-}
+// }
+
+// function coutKarde(anyshit){
+
+//    console.log(`Username is ${anyshit.teacher} and price is ${anyshit.price}`);
+
+// }
+
+// coutKarde(course)
 
 // console.log(course.teacher);   ////output - babbar  basic way 
 
