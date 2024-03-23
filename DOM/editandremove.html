@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last of DOM</title>
+</head>
+<body style="background-color: black; color : peru;">
+    
+<ul class = "language">
+
+
+<li>JAVASCRIPT</li>   
+
+<!-- //most usual appraoch to create a list/an element -->
+
+</ul>
+
+</body>
+
+
+<script>
+
+function addLanguage(langName) {
+
+const li = document.createElement('li')    //another approach to create a list/element using innerHTML
+li.innerHTML = `${langName}`
+document.querySelector('.language').
+appendChild(li)
+
+}
+
+addLanguage("python")
+addLanguage("Rust")
+
+function addAltLang (langName) {
+
+const li = document.createElement('li')   // best/most optimised approach to create a list/element
+
+li.appendChild(document.createTextNode(langName))
+document.querySelector('.language').appendChild(li)
+
+
+}
+addAltLang("CPP")
+
+
+//EDITING THE ELEMENTS
+
+const thirdLang = document.querySelector("li:nth-Child(3)")
+console.log(thirdLang); 
+// thirdLang.innerHTML = "Swift"      easy approach to edit but not optimised, saara traverse karna padega
+ const newli = document.createElement('li')
+ newli.textContent = "SWIFT"   //similar to innerHTML
+ thirdLang.replaceWith(newli)
+
+// innerHTML is used to change the content or text
+
+ // ANOTHER WAY TO EDIT THE ELEMENTS
+
+ const fourthLang = document.querySelector("li:nth-Child(4)")
+ fourthLang.outerHTML = '<li> NODE JS </li>'
+ 
+
+//REMOVING THE ELEMENTS
+
+const oneLang = document.querySelector("li:first-Child")
+oneLang.remove()
+
+
+</script>
+</html>

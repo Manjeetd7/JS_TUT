@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATING NEW ELEMENT IN DOM </title>
+</head>
+<body style="background-color: grey; color:black;">
+    
+    <div class="parent">
+
+          <div class="day">Monday</div>
+          <div class="day">Tuesday</div>
+          <div class="day">Wednesday</div>
+          <div class="day">Thursday</div>
+
+           
+
+
+    </div>
+
+
+</body>
+
+<script>
+
+document.querySelector('.parent')
+
+const parent= document.querySelector('.parent')
+
+
+// console.log(parent);
+// console.log(parent.children);   tells about it is HTMLcOLLECTION
+// console.log(parent.children[3].innerHTML)
+
+// we cannot use foreach cux it is HTMLCollection, but we can do for loop
+
+// for (let i = 0; i < parent.children.length; i++) {
+    
+    // console.log(parent.children[i].innerHTML);
+
+    const able = parent.children
+
+    able[1].style.color = 'orange'
+
+    // console.log(parent.lastElementChild);
+    // console.log(parent.firstElementChild);
+
+    const dayName = document.querySelector('.day')
+//  console.log(dayName);
+//  console.log(dayName.parentElement);
+//  console.log(dayName.nextElementSibling);
+
+console.log("NODES : " , parent.childNodes);  //gives number of nodeds in the class i.e 9 including line breaks, text, div and comments
+
+
+</script>
+</html>

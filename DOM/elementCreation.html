@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOdeList Creation</title>
+</head>
+<body style="background-color: grey; color:black;">
+    
+</body>
+
+<script>
+
+const ravi = document.createElement('div')
+
+console.log(ravi);
+ravi.className = "Immortal"
+ravi.id = "Gamer"
+ravi.setAttribute("title", "PRO")
+ravi.style.backgroundColor = "orange"
+ravi.style.padding = "15px"
+ravi. style. borderRadius = "10px"
+ravi.style.textAlign = "center"
+ravi.style.fontFamily = "arial"
+ravi.style.fontWeight = "bold"
+// ravi.innerText = "AAWA DE"   // one way to add a text
+const addText = document.createTextNode("AAWA DE") // better way to add a text as it does not overwrite
+ravi.appendChild(addText)
+
+document.body.appendChild(ravi)  // printing the whole div on webpage's body
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

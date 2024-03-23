@@ -1,0 +1,60 @@
+//INTRODUCTION TO DOM
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRO TO DOM</title>
+
+
+    <style>.black{background-color: black; color: beige;}</style>
+
+
+</head>
+<body class="black">
+
+    <!-- we can see class = heading but in the document, behind the scenes , it is saved as className 
+    we access the document in the webpage by accessing inspect
+If we are looking to access elements like id or class, we put the value of these and use getElementById(idvalue/class value)
+if we want to access further, we use document.getElementById('title').id/class/className
+then we move to get attributes by using document.getElementById('title').getAttribute('id/class/className')
+if we are looking to replace class name and id name, we use  [set] = document.getElementById('title').setAttribute('id')
+
+
+
+
+-->
+
+<div >
+    <h1 id="title" class="heading">LEARNING DOM FROM SCRACTH</h1>   
+    <h2>Lorem ipsum jfodn dolor sit amet consectetur.</h2>
+    <h2>Lorem ipsum dolor sit amet dmndkj consectetur.</h2>
+    <h2>Lorem ipsum dolor dkndkf sit amet consectetur.</h2>
+
+  <!-- while using queryselector on all h2s, itselects only first h2 -->
+
+<input type="password" name="PASSWORD" id="pass">
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+
+    <ul>
+        <li class="copy" >john</li>
+        <li class="copy" >jonny</li>
+        <li class="copy" >janardan</li>
+
+        <!-- biglist.forEach( function (li) {li.style.fontFamily = 'arial'}) = Way to write a nodelist,so it works like Array
+        nodelist is a bit like array that stores similar elts but it doesnot have maps function by default
+    used with query selector all
+NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll(). -->
+
+    </ul>
+
+ <!-- whereas we get HTMLcollection after collecting all the classes, uspe seedha foreach nahi laga sakte
+ to pehle use convert karte hai ek array mein by firstly storing in a variable and using = Array.from('variablename')
+ after that, for each function can be used updatedVariable.forEach( function () {}) -->
+
+
+
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nostrum!</p></div>
+</body>
+</html>
