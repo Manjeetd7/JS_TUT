@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    0 - UNSENT	Client has been created. open() not called yet. 
+1	1 - OPENED	open() has been called.
+2	2 - HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	3 - LOADING	Downloading; responseText holds partial data.
+4	4 - DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/manjeetd7'
+
+    const xhr = new XMLHttpRequest();  // XML http request were used before API requests. In AJAX
+    xhr.open('GET', requestUrl)  // GET is method
+
+    xhr.onreadystatechange = function(){  // state is changing from open to send
+        console.log(xhr.readyState);
+
+        if (xhr.readyState === 4) {    // when operation is complete
+
+
+            const data = JSON.parse(this.responseText) // in this process, a response text which is in string datatype
+             //gets converted in to JSON format using parse method
+          
+             console.log(typeof data);// now it is turned into Object datatype
+             
+            console.log(data.followers);
+        }
+    }
+    xhr.send();  // sent
+</script>
+</html>
+
+
+
+<!-- API - A medium to connect between two ends/nodes. Generally,between frontend and backend
+of a system but also between backend & frontend of different systems &
+vice -versa. It can also work as a mediator between two systems in which
+one is programmed in java and other is in javascript or any other language. 
